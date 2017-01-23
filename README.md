@@ -1,11 +1,16 @@
 # techesca-sms
-School management system
+using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine("Hello World!");
 
-
-
-
-class Simple{  
-    public static void main(String args[]){  
-     System.out.println("Hello Java");  
-    }  
-}  
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+    }
+}
