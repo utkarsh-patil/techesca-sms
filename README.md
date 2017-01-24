@@ -1,5 +1,13 @@
 # techesca-sms
-School management system
+using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+            Console.WriteLine("Hello World!");
+
 
 This is my first change.
 
@@ -9,3 +17,4 @@ class Simple{
      System.out.println("Hello Java");  
     }  
 }  
+
