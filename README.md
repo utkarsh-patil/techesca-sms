@@ -1,7 +1,7 @@
 # techesca-sms
 School management system
 
-
+This is my first change.
 
 
 class Simple{  
