@@ -1,0 +1,1 @@
+All html files should go in this directory
