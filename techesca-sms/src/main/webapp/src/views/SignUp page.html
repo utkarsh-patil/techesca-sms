@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Sign Up </title>
+<style>
+	h1 {
+		padding: 5pt;
+		font-size: 35pt;
+		background-color: #c2d1f0;
+		-webkit-border-radius: 8px/7px; 
+		-moz-border-radius: 8px/7px;
+		border: 3px solid #ffffff;
+		border-radius: 8px;
+		}
+		
+	h2 {
+		font-variant: small-caps;
+		}
+		
+	input{
+			font-family: 'Comic Sans MS';
+			font-size: 16px;
+			color: #000000;
+			width: 300px;
+			}
+			
+	select {
+			font-family: 'Comic Sans MS';
+			font-size: 16px;
+			color: #737373;
+			width: 300px;
+			}
+						
+	hr {
+		color: #a9a9a9;
+		opacity: 0.3;
+		}
+		
+	#maxLen {
+			max-length:10;
+			}
+			
+	body {
+		background-color: #c2d1f0;
+		}
+		
+	div {
+		text-align: center;
+		}
+		
+	.testbox {
+		margin: 20px auto;
+		width: 450px; 
+		height: 550px; 
+		-webkit-border-radius: 8px/7px; 
+		-moz-border-radius: 8px/7px; 
+		border-radius: 8px/7px; 
+		background-color: #0080ff; 
+		-webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		-moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		border: solid 1px #cbc9c9;
+		padding: 10pt;
+		}
+		
+		.button {
+				-webkit-border-radius: 5px; 
+				-moz-border-radius: 5px; 
+				border-radius: 5px; 
+				background-color: #3a57af;
+				}
+				
+		.form p.format {
+			font-size: 12px; 
+			margin:0px 0px 10px 0;
+			line-height: 14px; 
+			font-family: Arial, Helvetica;
+			}
+			
+		.form label { 
+			color: #000; 
+			font-weight:bold;
+			font-size: 12px;
+			font-family:Arial, Helvetica; 
+			}
+			
+		.form input { 
+			background-color: rgba(255, 255, 255, 0.4); 
+			border: 1px solid rgba(122, 192, 0, 0.15); 
+			padding: 7px; 
+			font-family: Keffeesatz, Arial; 
+			color: #4b4b4b; 
+			font-size: 14px; 
+			-webkit-border-radius: 5px; 
+			margin-bottom: 15px; 
+			margin-top: -10px; 
+			}
+			
+		#submit {
+			width: 100%;
+			margin-top: 10px;
+			padding: 8px 50px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 10px;
+			border: 1px solid #737b8d;
+			font-size: 16px;
+			font-weight: bold;
+			letter-spacing: 1.5px;
+			text-align: center;
+			background-color: #ffffff;
+			color: #000000;
+			text-decoration: none;
+			
+		.form input {
+			width: 100%;
+			margin-top: 20px;
+			padding: 10px 50px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 10px;
+			border: 1px solid #737b8d;
+			font-size: 16px;
+			font-weight: bold;
+			letter-spacing: 1.5px;
+			text-align: center;
+			background-color: #ffffff;
+			color: #000000;
+			text-decoration: none;
+    }
+	
+</style>
+
+<script type="text/javascript">
+	//validate empty fields
+	function validate() {
+		if (form1.fname.value="" || form.lname.value="" || form.email.value="" || form.contact.value="" || form.uname.value="" || form.password.value="" || form.confpass.value="") {
+			alert ("Field Required !");
+			return (false);
+		}
+		
+		//validate password length
+		if (form1.password.value.length < 5) {
+			alert("Please enter at least 5 characters in the \"Password\" field.");
+			form1.password.focus();
+			return (false);
+		}
+		//validate match passwords
+		if (form1.password.value != form1.confpass.value) {
+			alert("The two passwords are not the same.");
+			form1.confpass.focus();
+			return (false);
+		}
+		
+		//validate dropdown select
+		if (form1.gender.selectedIndex < 0) {
+			alert("Please select one of the \"Gender\" options.");
+			form1.gender.focus();
+			return (false);
+		}
+		
+		//validate email address, must have @ and .
+		var checkEmail = "@.";
+		var checkStr = theForm.Email.value;
+		var EmailValid = false;
+		var EmailAt = false;
+		var EmailPeriod = false;
+		for (i = 0;  i < checkStr.length;  i++) {
+			ch = checkStr.charAt(i);
+			for (j = 0;  j < checkEmail.length;  j++) {
+				if (ch == checkEmail.charAt(j) && ch == "@")
+					EmailAt = true;
+				if (ch == checkEmail.charAt(j) && ch == ".")
+					EmailPeriod = true;
+				if (EmailAt && EmailPeriod)
+					break;
+				if (j == checkEmail.length)
+					break;
+			}
+			//validate if both the @ and . are in the string
+			if (EmailAt && EmailPeriod) {
+				EmailValid = true
+				break;
+			}
+		}
+		if (!EmailValid) {
+			alert("The \"email\" field must contain an \"@\" and a \".\".");
+			form1.email.focus();
+			return (false);
+		}
+		
+		//validate contact number
+		if(form.contact.value != /^[0-9]$/) {
+			alert("Please enter only digit characters in the \"contact\" field.");
+			form1.contact.focus();
+			return (false);
+		}
+		
+		//validate name
+		var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		var checkStr = form1.fname.value;
+		var allValid = true;
+		for (i = 0;  i < checkStr.length;  i++) {
+			ch = checkStr.charAt(i);
+			for (j = 0;  j < checkOK.length;  j++)
+			if (ch == checkOK.charAt(j))
+				break;
+			if (j == checkOK.length) {
+				allValid = false;
+				break;
+			}
+		}
+		if (!allValid) {
+			alert("Please enter only letter and numeric characters in the \"name\" field.");
+			form1.fname.focus();
+			return (false);
+		}
+		
+		
+	}
+</script>
+</head>
+
+<body>
+<form name="form1" action="Home_Page.html" method="post">
+	
+	<div class="testbox">
+		<h2> SIGN UP </h2>
+		
+		<form action="#">
+			<hr>
+				<p class="format"> <label id="" for="fname"> </label> </p>
+				<input type="text" name="fname" id="fname" placeholder="First Name" required/>
+				
+				<p class="format"> <label id="" for="lname"> </label> </p>
+				<input type="text" name="lname" id="lname" placeholder="Last Name" required/>
+				
+				<p class="format"> <label id="" for="gender"> </label> </p>
+				<select class="select-style gender" name="gender">
+	            <option value="select">Gender</option>
+	            <option value="m">Male</option>
+	            <option value="f">Female</option>
+	            </select>
+				
+				<p class="format"> <label id="" for="email"> </label> </p>
+				<input type="text" name="email" id="email" placeholder="Email" required/>
+				
+				<p class="format"> <label id="" for="contact"> </label> </p>
+				<input type="text" name="contact" id="contact" placeholder="Contact Number" required/>
+				
+				<p class="format"> <label id="" for="uname"> </label> </p>
+				<input type="text" name="uname" id="fname" placeholder="User Name" required/>
+				
+				<p class="format"> <label id="" for="password"> </label> </p>
+				<input type="text" name="password" id="password" placeholder="Password" required/>
+				
+				<p class="format"> <label id="" for="password"> </label> </p>
+				<input type="text" name="confpass" id="confpass" placeholder="Confirm Password" required/>
+				
+				<p class="format"> <label id="" for="image"> </label> </p>
+				<input type="file" name="image" id="image">
+			</hr>
+			
+			<hr>
+				<input type="submit" id="submit" value="SIGN UP">
+			</hr>
+		</form>
+	</div>
+	
+</form>
+</body>
+</html>

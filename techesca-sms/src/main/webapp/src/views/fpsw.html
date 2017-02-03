@@ -1,0 +1,71 @@
+<html>
+<head>
+<style type="text/css">
+body
+{
+	background-color:#4682b4;
+	
+	background-repeat:repeat-x;
+}
+
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    height:30;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    margin-top:25;
+    margin-left:20;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: 25%;
+     height:30;;
+    padding: 10px 18px;
+    background-color: #f44336;
+    margin-top:25;
+    margin-left:20;
+}
+
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function validateform()
+{
+    var x=document.getElementById('email').value;
+    var str1=/[A-z0-9._-]+\@[A-z0-9-_.]+\.[A-z0-9]{2,4}$/;
+     if(document.getElementById('email').value=="")
+     {
+        document.getElementById('err1').innerHTML='Enter the Email';
+        return false;
+     }
+     if(x.match(str1))
+     {
+       document.getElementById(err1).innerHTML=' ';
+     }
+     else
+     {
+       document.getElementById(err1).innerHTML='invalid Email';
+       return false;
+     }
+
+</script>
+<div style="height:200;width:500;align:center;float:left;margin-left:300;margin-top:200;background-color:#FFE4C4">
+<label><b> Please insert ur e-mail id then we will send password to you n after 
+getting password please change it with new one</b></label>
+<br>
+<label>E-mail:</label>
+<input type="text" id="txt1"><i id="err1"></i>
+<br>
+<button type="submit" onclick="validation()">Submit</button>
+<button type="button" class="cancelbtn">Cancel</button>
+</div>
+</body>
+</html>
