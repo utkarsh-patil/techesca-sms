@@ -1,0 +1,62 @@
+<head>
+<link rel=" stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<script type="text/javascript">
+function validateform()
+{
+    var x=document.getElementById('email').value;
+    var str1=/[A-z0-9._-]+\@[A-z0-9-_.]+\.[A-z0-9]{2,4}$/;
+     if(document.getElementById('email').value=="")
+     {
+        document.getElementById('err1').innerHTML='Enter the Email';
+        return false;
+     }
+     if(x.match(str1))
+     {
+       document.getElementById(err1).innerHTML=' ';
+     }
+     else
+     {
+       document.getElementById(err1).innerHTML='invalid Email';
+       return false;
+     }
+
+     var str2=/([A-z0-9._-]{6,32})$/;
+     if((document.getElementById('psw').value=="")||!(document.getElementById('psw').value.match(str2)))
+     {
+         if(document.getElementById('psw').value==" ")
+         {
+           document.getElementById(err2).innerHTML='plz enter the password';
+           return false;
+          }
+        
+     }
+}
+</script>
+
+<form align="center" name="f1" action="" method="POST" onsubmit="return validateform()">
+
+
+<div class="login.css" style="background-color:#FFE4C4; align:center;float:right;margin-top:200;height:180;width:625;margin-left:200">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="email" ><i id="err1"></i>
+
+<br>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw"  id="psw"><i id="err2"></i>
+
+<br>
+    
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+<br>
+  <div class="container" style="background-color:#FFE4C4;width:593;margin-left:200;align:center;float:right">
+    <button type="submit" onclick="validateform()" >Login</button>
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"> <a href="fpsw.html">Forgot password?</a></span>
+  </div>
+
+</form>
+</body>
