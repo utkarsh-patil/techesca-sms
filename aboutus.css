@@ -1,0 +1,25 @@
+body
+{
+ background-color:black;
+}
+h1
+{
+margin-left:300;
+color:red;
+}
+h2
+{
+margin-top:50;
+margin-left:25;
+align:center;
+color:blue;
+}
+img
+{
+margin-left:200;
+}
+Label
+{
+color:black;
+font-size:18;
+}
