@@ -1,0 +1,154 @@
+	h1 
+	{
+		padding: 5pt;
+		font-size: 35pt;
+		background-color: #c2d1f0;
+		-webkit-border-radius: 8px/7px; 
+		-moz-border-radius: 8px/7px;
+		border: 3px solid #ffffff;
+		border-radius: 8px;
+	}
+
+	
+	h2 
+	{
+		font-variant: small-caps;
+	}
+
+	
+	input
+	{
+		font-family: 'Comic Sans MS';
+		font-size: 16px;
+		color: #000000;
+		width: 300px;
+	}
+
+	
+	#gender
+	{
+		color: #000000;
+	}
+	
+		
+	select 
+	{
+		font-family: 'Comic Sans MS';
+		font-size: 16px;
+		color: #737373;
+		width: 300px;
+	}
+
+	
+	hr
+	{
+		color: #a9a9a9;
+		opacity: 0.3;
+	}
+	
+	
+	body 
+	{
+		background-color: #c2d1f0;
+	}
+
+		
+	div 
+	{
+		text-align: center;
+	}
+	
+	
+	.testbox 
+	{
+		margin: 20px auto;
+		width: 550px; 
+		height: 550px; 
+		-webkit-border-radius: 8px/7px; 
+		-moz-border-radius: 8px/7px; 
+		border-radius: 8px/7px; 
+		background-color: #0080ff; 
+		-webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		-moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+		border: solid 1px #cbc9c9;
+		padding: 10pt;
+	}
+	
+	
+	.button 
+	{
+		-webkit-border-radius: 5px; 
+		-moz-border-radius: 5px; 
+		border-radius: 5px; 
+		background-color: #3a57af;
+	}
+	
+	
+	.form p.format 
+	{
+		font-size: 12px; 
+		margin:0px 0px 10px 0;
+		line-height: 14px; 
+		font-family: Arial, Helvetica;
+	}
+	
+	
+	.form label 
+	{ 
+		color: #000; 
+		font-weight:bold;
+		font-size: 12px;
+		font-family:Arial, Helvetica; 
+	}
+	
+	
+	.form input 
+	{ 
+		background-color: rgba(255, 255, 255, 0.4); 
+		border: 1px solid rgba(122, 192, 0, 0.15); 
+		padding: 7px; 
+		font-family: Keffeesatz, Arial; 
+		color: #4b4b4b; 
+		font-size: 14px; 
+		-webkit-border-radius: 5px; 
+		margin-bottom: 15px; 
+		margin-top: -10px; 
+	}
+	
+	
+	#submit 
+	{
+		width: 30%;
+		margin-top: 10px;
+		padding: 8px 40px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 10px;
+		border: 1px solid #737b8d;
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 1.5px;
+		text-align: center;
+		background-color: #ffffff;
+		color: #000000;
+		text-decoration: none;
+	}
+			
+	.form input 
+	{
+		width: 100%;
+		margin-top: 20px;
+		padding: 10px 50px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 10px;
+		border: 1px solid #737b8d;
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: 1.5px;
+		text-align: center;
+		background-color: #ffffff;
+		color: #000000;
+		text-decoration: none;
+    }
